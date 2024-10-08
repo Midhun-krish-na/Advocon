@@ -1,0 +1,248 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgb(255, 111, 92);
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #ffcc00;
+}
+
+/* Profile Container */
+.profile-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.alert-success {
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+
+.alert-danger {
+    background-color: #f2dede;
+    color: rgb(255, 111, 92);
+}
+
+.profile-box {
+    text-align: center;
+}
+
+.profile-box img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #e65800;
+}
+
+.profile-box h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #e65800;
+}
+
+.profile-box p {
+    font-size: 18px;
+    margin: 8px 0;
+    color: #555;
+}
+
+.profile-box p strong {
+    color: #333;
+}
+
+/* Form Styling */
+form {
+    margin-top: 30px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #e65800;
+    box-shadow: 0 0 5px rgba(0, 115, 230, 0.3);
+    outline: none;
+}
+
+form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+form button {
+    background-color: #e65800;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e65800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 15px;
+    }
+
+    .profile-box img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-box h2 {
+        font-size: 24px;
+    }
+
+    .profile-box p {
+        font-size: 16px;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        font-size: 14px;
+    }
+
+    form button {
+        font-size: 14px;
+    }
+}
+
+
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.action-buttons button {
+    background-color: #e65800;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.action-buttons button:hover {
+    background-color: #e65800;
+}
+
+/* Existing styles omitted for brevity */
+
+/* Star Rating System */
+.rating {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.stars {
+    display: inline-block;
+}
+
+.stars input {
+    display: none;
+}
+
+.stars label {
+    font-size: 30px;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.stars input:checked ~ label {
+    color: #e65800;
+}
+
+.stars label:hover,
+.stars label:hover ~ label {
+    color: #ffcc00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .rating {
+        font-size: 20px;
+    }
+}
+
+.certifications {
+    margin-top: 20px;
+}
+
+.certification {
+    margin-bottom: 10px;
+}
+
+.cert-img {
+    max-width: 200px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.certification a {
+    display: inline-block;
+    padding: 8px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.certification a:hover {
+    text-decoration: underline;
+}

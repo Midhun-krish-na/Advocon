@@ -1,0 +1,300 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+/* Root Variables */
+:root {
+    --color-white: hsl(252, 30%, 100%);
+    --color-light: hsl(252, 30%, 95%);
+    --color-gray: hsl(252, 15%, 65%);
+    --color-primary: hsl(252, 75%, 60%);
+    --color-secondary: hsl(252, 100%, 90%);
+    --color-success: hsl(120, 95%, 65%);
+    --color-danger: hsl(0, 95%, 65%);
+    --color-dark: hsl(252, 30%, 17%);
+    --color-black: hsl(252, 30%, 10%);
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+    --sticky-top-left: 5.4rem;
+}
+
+/* Global Styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+body {
+    color: var(--color-dark);
+    background: var(--color-light);
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+}
+
+/* General Styles */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 18vw auto 20vw; /* Left sidebar, flexible content, right section */
+    column-gap: 2rem;
+}
+
+/* Profile Photo */
+.profile-photo {
+    width: 2.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* Navbar Styles */
+nav {
+    width: 100%;
+    background: var(--color-white);
+    padding: 0.7rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .search-bar {
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: var(--search-padding);
+}
+
+nav .search-bar input[type="search"] {
+    background: transparent;
+    width: 30vw;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-dark);
+}
+
+nav .search-bar input[type="search"]::placeholder {
+    color: var(--color-gray);
+}
+
+nav .log {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+
+nav .profile-photo img {
+    border: 2px solid var(--color-primary);
+}
+
+/* Sidebar Styles */
+.left {
+    position: sticky;
+    top: var(--sticky-top-left);
+}
+
+.left .sidebar {
+    margin-top: 1rem;
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+}
+
+.left .sidebar .menu-item {
+    display: flex;
+    align-items: center;
+    padding: var(--card-padding);
+    border-bottom: 1px solid var(--color-gray);
+    text-decoration: none;
+    color: var(--color-dark);
+    transition: background 0.3s;
+}
+
+.left .sidebar .menu-item.active,
+.left .sidebar .menu-item:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Main Content Styles */
+main {
+    position: relative;
+    top: 5.4rem;
+}
+
+/* Left Column Styles */
+.left {
+    height: max-content;
+}
+
+.left .profile {
+    padding: var(--card-padding);
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    width: 100%;
+}
+
+.left .profile .handle h4 {
+    margin: 0;
+}
+
+.left .profile .handle p {
+    margin: 0;
+    color: var(--color-gray);
+}
+
+/* Right Column Styles */
+.right {
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+}
+
+/* Advocate List Styles */
+.profile-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.right h3 {
+    margin-bottom: 1rem;
+}
+
+/* No Advocates Found */
+.right p {
+    text-align: center;
+}
+
+/* Gradient Backgrounds */
+body h1 {
+    color: lightsalmon;
+}
+
+body p {
+    color: #7C7C7C;
+}
+
+body a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* Dark Theme */
+body.dark {
+    background: #282f59;
+}
+
+body.dark p {
+    color: #cbcdda;
+}
+
+body.dark h1 {
+    color: whitesmoke;
+}
+
+/* Scroll to Top Button */
+#scrolltp {
+    color: white;
+    background: tomato;
+    padding: 15px;
+    border-radius: 50%;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    cursor: pointer;
+    transition: opacity 0.5s;
+}
+
+/* Theme Toggle */
+.theme {
+    position: absolute;
+    top: 80px;
+    right: 75px;
+}
+
+.theme label {
+    width: 50px;
+    height: 20px;
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.theme label .ball {
+    width: 15px;
+    height: 15px;
+    background: #282f59;
+    border-radius: 50%;
+    margin: 5px;
+    transition: transform 0.5s;
+}
+
+.theme .checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.theme .checkbox:checked ~ label {
+    background: #282f59;
+}
+
+.theme .checkbox:checked ~ label .ball {
+    background-color: rgb(235, 235, 235);
+    transform: translateX(25px);
+}
+
+/* Animations */
+@keyframes scaleup {
+    0% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Stack columns */
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    main {
+        padding: 1rem; /* Padding for main content */
+    }
+
+    nav .search-bar input[type="search"] {
+        width: 100%; /* Full width search bar */
+    }
+}

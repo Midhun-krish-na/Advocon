@@ -1,0 +1,374 @@
+/* google font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+/* global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+body h1 {
+    color: lightsalmon;
+}
+
+body p {
+    color: #7C7C7C;
+}
+
+body a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* gradient color */
+:root {
+    --gradient-1: linear-gradient(to bottom right, rgb(62, 212, 238), rgb(43, 0, 255));
+    --gradient-2: linear-gradient(to bottom right, rgb(80, 80, 255), #fd7777);
+    --gradient-3: linear-gradient(to bottom right, rgb(255, 207, 145), rgb(255, 111, 92));
+    --gradient-4: linear-gradient(to bottom right, rgb(42, 245, 152), rgb(0, 158, 253));
+    --gradient-5: linear-gradient(to bottom right, rgb(255, 111, 92), rgb(255, 207, 145));
+}
+
+/* header */
+header {
+    background-image: url(../img/icon/carousel-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    padding: 10px 10px;
+    align-items: center;
+}
+
+.navbar ul {
+    flex: 1;
+    text-align: right;
+    margin: 0 25px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 25px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.logo {
+    width: 90px;
+}
+
+/* login */
+.body-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../img/icon/carousel-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper-reg {
+    position: relative;
+    width: 400px;
+    height: auto;
+    background: transparent;
+    border: 2px solid rgba(147, 147, 147, 0.499);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.wrapper-reg .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label,
+.input-box select:focus~label,
+.input-box select:valid~label {
+    top: -5px;
+}
+
+.input-box input,
+.input-box select {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    padding: 0 30px 0 5px;
+}
+
+.input-box select {
+    appearance: none;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+    line-height: 57px;
+}
+
+.input-box input[type="file"] {
+    padding: 0;
+}
+
+.input-box input[type="file"]::file-selector-button {
+    display: none;
+}
+
+.input-box input[type="file"]::before {
+    content: 'Choose files';
+    display: inline-block;
+    background: tomato;
+    border: 2px solid tomato;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1em;
+    margin-right: 10px;
+}
+
+.input-box input[type="file"]:hover::before {
+    background: #fd7777;
+    border-color: #fd7777;
+}
+
+.input-box input[type="file"]:active::before {
+    background: #d65a5a;
+    border-color: #d65a5a;
+}
+
+.input-box.file-input label {
+    position: absolute;
+    top: -25px;
+    left: 5px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+
+.terms {
+    font-size: .9em;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    margin: -15px 0 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.terms label input {
+    accent-color: tomato;
+    margin-right: 3px;
+}
+
+.terms a {
+    color: white;
+    text-decoration: none;
+}
+
+.login-register p {
+    color: #cdcdcd;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+.reg {
+    width: 100%;
+    height: 45px;
+    background: tomato;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.login-register {
+    font-size: .9em;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    font-weight: 600;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+.wrapper .icon-closs {
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: tomato;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+/* File Input Styling */
+.input-box.file-input {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border: 2px solid rgba(147, 147, 147, 0.499);
+    margin: 30px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+}
+
+.input-box.file-input input[type="file"] {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.input-box.file-input label {
+    position: relative;
+    display: block;
+    color: white;
+    font-weight: 500;
+    pointer-events: none;
+}
+
+.input-box select {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid rgba(147, 147, 147, 0.499);
+    color: #e27019;
+    font-weight: bold;
+    padding: 0 10px;
+    border-radius: 5px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+    line-height: 57px;
+}
+
+i.fa.fa-eye.toogle-password {
+    right: 10px;
+}
+
+.certifications {
+    margin-top: 20px;
+}
+
+.certification {
+    margin-bottom: 10px;
+}
+
+.cert-img {
+    max-width: 200px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.certification a {
+    display: inline-block;
+    padding: 8px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.certification a:hover {
+    text-decoration: underline;
+}
+
+.alert {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
